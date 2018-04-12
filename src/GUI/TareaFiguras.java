@@ -28,7 +28,7 @@ public class TareaFiguras extends JPanel {
         }//end if
         if (ejeY + ya > getHeight() - 30) {
             ya = -1;
-        }//end if
+        }//fin if
 
         //incrementa los valores de los ejes
         ejeX = ejeX + xa;
@@ -39,16 +39,16 @@ public class TareaFiguras extends JPanel {
     private void moveSquare() {
         if (ejeX1 + xa1 < 0) {
             xa1 = 2;
-        }//end if
+        }//fin if
         if (ejeX1 + xa1 > getWidth() - 30) {
             xa1 = -2;
-        }//end if
+        }//fin if
         if ((ejeY1 + 40) + ya1 < 0) {
             ya1 = 2;
-        }//end if
+        }//fin if
         if ((ejeY1 + 40) + ya1 > getHeight() - 30) {
             ya1 = -2;
-        }//end if
+        }//fin if
 
         //incrementa los valores de los ejes
         ejeX1 = ejeX1 + xa1;
@@ -83,6 +83,6 @@ public class TareaFiguras extends JPanel {
             tfig.moveSquare();
             tfig.repaint();
             Thread.sleep(7);
-        }
-    }
-}
+        }//fin while
+    }//fin metodo main
+}//fin clase

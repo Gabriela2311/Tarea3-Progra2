@@ -31,7 +31,7 @@ public class TareaLineas extends JPanel{
     private void drawLine(Graphics g){
         
         // dibujar los ejes del plano cartesiano
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000; i++) {
             g.setColor(Color.cyan);
             double x,y,x0,y0;
             y0= (Math.random()*900);
@@ -67,23 +67,20 @@ public class TareaLineas extends JPanel{
         return x;
     }
     
-    private double coord_y(double y)
-    {
-        //transfoma el eje de las y como sifuera un plano cartesiano (el da vuelta y el y funciona 
+     //transfoma el eje de las y como sifuera un plano cartesiano (el da vuelta y el y funciona 
         //de abajo hacia arriba)
+    private double coord_y(double y){
         double real_y = (double)this.getHeight() - y;
         return real_y;
-    }   
-   
+    }   //fin coord_y
+   //Dibuja la linea
    @Override
     protected void paintComponent(Graphics g) {
         
         super.paintComponent(g);
-        // se llama al meto draw
+        // se llama al metodo draw
         drawLine(g);
-        
-
-    }
+    }//fin metodo painComponent
     
     public static void main(String[] args) {
         JFrame window = new JFrame(" Draw Lines ");
@@ -94,7 +91,7 @@ public class TareaLineas extends JPanel{
         window.setResizable(false);
         window.setLocation(150, 100);
         window.setVisible(true);         
-    }
+    }//fin main
 
     
 } // fin clase
